@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>beniget</title>
+    <meta name="generator" content="pydoctor 24.11.2"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    <link rel="canonical" href="https://tristanlatr.github.io/beniget/index.html" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/tristanlatr/beniget" class="projecthome">Gast, Beniget!</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code class="thisobject"><a href="index.html" class="internal-link" title="This package">beniget</a></code> 
+      </div>
+      
+      <div>
+         
+          <div class="childrenKindTitle">Contents</div>
+          <ul><li><a class="rst-internal rst-reference" href="#rst-api" id="rst-toc-entry-1">API</a></li>
+<li><p class="rst-first"><a class="rst-internal rst-reference" href="#rst-sample-usages" id="rst-toc-entry-2">Sample Usages</a></p>
+<ul class="rst-simple">
+<li><a class="rst-internal rst-reference" href="#rst-detect-unused-imports" id="rst-toc-entry-3">Detect unused imports</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-find-all-functions-marked-with-a-given-decorator" id="rst-toc-entry-4">Find all functions marked with a given decorator</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-gather-attributes-of-self" id="rst-toc-entry-5">Gather attributes of <tt class="rst-docutils rst-literal">self</tt></a></li>
+<li><a class="rst-internal rst-reference" href="#rst-compute-the-identifiers-captured-by-a-function" id="rst-toc-entry-6">Compute the identifiers captured by a function</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-compute-the-set-of-instructions-required-to-compute-a-function" id="rst-toc-entry-7">Compute the set of instructions required to compute a function</a></li>
+</ul>
+</li>
+<li><a class="rst-internal rst-reference" href="#rst-acknowledgments" id="rst-toc-entry-8">Acknowledgments</a></li>
+</ul>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.beniget.html" class="internal-link" title="beniget.beniget">beniget</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.ordered_set.html" class="internal-link" title="beniget.ordered_set">ordered<wbr></wbr>_set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.version.html" class="internal-link" title="beniget.version">version</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.__main__.html" class="internal-link" title="beniget.__main__">__main__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.Ancestors.html" class="internal-link" title="beniget.Ancestors"><wbr></wbr>Ancestors</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.Def.html" class="internal-link" title="beniget.Def"><wbr></wbr>Def</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.DefUseChains.html" class="internal-link" title="beniget.DefUseChains"><wbr></wbr>Def<wbr></wbr>Use<wbr></wbr>Chains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.UseDefChains.html" class="internal-link" title="beniget.UseDefChains"><wbr></wbr>Use<wbr></wbr>Def<wbr></wbr>Chains</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__version__" class="internal-link" title="beniget.__version__">__version__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="package"><code><code><a href="index.html" class="internal-link">beniget</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          package documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <a href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/__init__.py" class="sourceLink">(source)</a>
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Beniget is a collection of Compile-time analyse on Python Abstract Syntax Tree(AST).
+It's a building block to write static analyzer or compiler for Python.</p>
+<p>Beniget relies on <a class="rst-external rst-reference" href="https://pypi.org/project/gast/" target="_top">gast</a> to provide a cross
+version abstraction of the AST, effectively working across all Python 3 versions greater than 3.6.</p>
+<p>Since version 0.5.0, beniget works with the standard library <a class="rst-external rst-reference" href="https://docs.python.org/3/library/ast.html#module-ast" target="_top">ast</a> as well 🥳!</p>
+<div class="rst-section" id="rst-api">
+<h2 class="heading">API</h2>
+<p>Basically Beniget provides three analyse:</p>
+<ul class="rst-simple">
+<li><code><a href="beniget.Ancestors.html" class="internal-link">beniget.Ancestors</a></code> that maps each node to the list of enclosing nodes;</li>
+<li><code><a href="beniget.DefUseChains.html" class="internal-link">beniget.DefUseChains</a></code> that maps each node to the list of definition points in that node;</li>
+<li><code><a href="beniget.UseDefChains.html" class="internal-link">beniget.UseDefChains</a></code> that maps each node to the list of possible definition of that node.</li>
+</ul>
+<p>See sample usages and/or run <tt class="rst-docutils rst-literal">pydoc beniget</tt> for more information :-).</p>
+</div>
+<div class="rst-section" id="rst-sample-usages">
+<h2 class="heading">Sample Usages</h2>
+<div class="rst-section" id="rst-detect-unused-imports">
+<h3 class="heading">Detect unused imports</h3>
+<p>This is a very basic usage: look for def without any use, and warn about them, focusing on imported values.</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> beniget, gast <span class="py-keyword">as</span> ast
+
+<span class="py-comment"># parse some simple statements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>code = <span class="py-string">"from math import cos, sin; print(cos(3))"</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>module = ast.parse(code)
+
+<span class="py-comment"># compute the def-use chains at module level</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>duc = beniget.DefUseChains()
+<span class="py-prompt">&gt;&gt;&gt; </span>duc.visit(module)
+
+<span class="py-comment"># grab the import statement</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>imported = module.body[0].names
+
+<span class="py-comment"># inspect the users of each imported name</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> name <span class="py-keyword">in</span> imported:
+<span class="py-more">... </span>  ud = duc.chains[name]
+<span class="py-more">... </span>  <span class="py-keyword">if</span> <span class="py-keyword">not</span> ud.users():
+<span class="py-more">... </span>    <span class="py-builtin">print</span>(<span class="py-string">"Unused import: {}"</span>.format(ud.name()))
+Unused <span class="py-keyword">import</span>: sin</pre><p><em>NOTE</em>: Due to the dynamic nature of Python, one can fool this analysis by
+calling the <tt class="rst-docutils rst-literal">eval</tt> function, eventually through an indirection, or by performing a lookup
+into <tt class="rst-docutils rst-literal">globals()</tt>.</p>
+</div>
+<div class="rst-section" id="rst-find-all-functions-marked-with-a-given-decorator">
+<h3 class="heading">Find all functions marked with a given decorator</h3>
+<p>Let's assume we've got a <tt class="rst-docutils rst-literal">@nice</tt> decorator applied to some functions. We can traverse the users
+of this decorator to find which functions are decorated.</p>
+<pre class="py-doctest">
+<span class="py-comment"># parse some simple statements</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>code = <span class="py-string">"""</span>
+<span class="py-more">... </span><span class="py-string">nice = lambda x: x</span>
+<span class="py-more">... </span><span class="py-string">@nice</span>
+<span class="py-more">... </span><span class="py-string">def aw(): pass</span>
+<span class="py-more">... </span><span class="py-string">def some(): pass"""</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>module = ast.parse(code)
+
+<span class="py-comment"># compute the def-use chains at module level</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>duc = beniget.DefUseChains()
+<span class="py-prompt">&gt;&gt;&gt; </span>duc.visit(module)
+
+<span class="py-comment"># analysis to find parent of a node</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>ancestors = beniget.Ancestors()
+<span class="py-prompt">&gt;&gt;&gt; </span>ancestors.visit(module)
+
+<span class="py-comment"># find the nice definition</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>nice = [d <span class="py-keyword">for</span> d <span class="py-keyword">in</span> duc.locals[module] <span class="py-keyword">if</span> d.name() == <span class="py-string">"nice"</span>][0]
+
+<span class="py-comment"># walkthrough its users</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> use <span class="py-keyword">in</span> nice.users():
+<span class="py-more">... </span>  <span class="py-comment"># we're interested in the parent of the decorator</span>
+<span class="py-more">... </span>  parents = ancestors.parents(use.node)
+<span class="py-more">... </span>  <span class="py-comment"># direct parent of the decorator is the function</span>
+<span class="py-more">... </span>  fdef = parents[-1]
+<span class="py-more">... </span>  <span class="py-builtin">print</span>(fdef.name)
+aw</pre></div>
+<div class="rst-section" id="rst-gather-attributes-of-self">
+<h3 class="heading">Gather attributes of <tt class="rst-docutils rst-literal">self</tt></h3>
+<p>This analysis gathers all attributes of a class, by going through all methods and checking
+the users of the first method parameter, investigating the one used in attribute lookup.</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> gast <span class="py-keyword">as</span> ast
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> beniget
+
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">class</span> <span class="py-defname">Attributes</span>(ast.NodeVisitor):
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, module_node):
+<span class="py-more">... </span>        <span class="py-comment"># compute the def-use of the module</span>
+<span class="py-more">... </span>        self.chains = beniget.DefUseChains()
+<span class="py-more">... </span>        self.chains.visit(module_node)
+<span class="py-more">... </span>        self.users = <span class="py-builtin">set</span>()  <span class="py-comment"># all users of `self`</span>
+<span class="py-more">... </span>        self.attributes = <span class="py-builtin">set</span>()  <span class="py-comment"># attributes of current class</span>
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">visit_ClassDef</span>(self, node):
+<span class="py-more">... </span>        <span class="py-comment"># walk methods and fill users of `self`</span>
+<span class="py-more">... </span>        <span class="py-keyword">for</span> stmt <span class="py-keyword">in</span> node.body:
+<span class="py-more">... </span>            <span class="py-keyword">if</span> <span class="py-builtin">isinstance</span>(stmt, ast.FunctionDef):
+<span class="py-more">... </span>                self_def = self.chains.chains[stmt.args.args[0]]
+<span class="py-more">... </span>                self.users.update(use.node <span class="py-keyword">for</span> use <span class="py-keyword">in</span> self_def.users())
+<span class="py-more">... </span>        self.generic_visit(node)
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">visit_Attribute</span>(self, node):
+<span class="py-more">... </span>        <span class="py-comment"># any attribute of `self` is registered</span>
+<span class="py-more">... </span>        <span class="py-keyword">if</span> node.value <span class="py-keyword">in</span> self.users:
+<span class="py-more">... </span>            self.attributes.add(node.attr)
+
+<span class="py-prompt">&gt;&gt;&gt; </span>code = <span class="py-string">"class My(object):\n def __init__(self, x): self.x = x"</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>module = ast.parse(code)
+<span class="py-prompt">&gt;&gt;&gt; </span>classdef = module.body[0]
+<span class="py-prompt">&gt;&gt;&gt; </span>attr = Attributes(module)
+<span class="py-prompt">&gt;&gt;&gt; </span>attr.visit(classdef)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-builtin">list</span>(attr.attributes)
+[<span class="py-string">'x'</span>]</pre><p><em>NOTE</em>: This is <em>not</em> an alias analysis, so assigning <tt class="rst-docutils rst-literal">self</tt> to another variable, or
+setting it in a tuple is not captured by this analysis. It's still possible to write such an
+a analysis using def-use chains though ;-)</p>
+</div>
+<div class="rst-section" id="rst-compute-the-identifiers-captured-by-a-function">
+<h3 class="heading">Compute the identifiers captured by a function</h3>
+<p>In Python, inner functions (and lambdas) can capture identifiers defined in the outer scope.
+This analysis computes such identifiers by registering each identifier defined in the function,
+then walking through all loaded identifier and checking whether it's local or not.</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> gast <span class="py-keyword">as</span> ast
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> beniget
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">class</span> <span class="py-defname">Capture</span>(ast.NodeVisitor):
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, module_node):
+<span class="py-more">... </span>        <span class="py-comment"># initialize def-use chains</span>
+<span class="py-more">... </span>        self.chains = beniget.DefUseChains()
+<span class="py-more">... </span>        self.chains.visit(module_node)
+<span class="py-more">... </span>        self.users = <span class="py-builtin">set</span>()  <span class="py-comment"># users of local definitions</span>
+<span class="py-more">... </span>        self.captured = <span class="py-builtin">set</span>()  <span class="py-comment"># identifiers that don't belong to local users</span>
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">visit_FunctionDef</span>(self, node):
+<span class="py-more">... </span>        <span class="py-comment"># initialize the set of node using a local variable</span>
+<span class="py-more">... </span>        <span class="py-keyword">for</span> def_ <span class="py-keyword">in</span> self.chains.locals[node]:
+<span class="py-more">... </span>            self.users.update(use.node <span class="py-keyword">for</span> use <span class="py-keyword">in</span> def_.users())
+<span class="py-more">... </span>        self.generic_visit(node)
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">visit_Name</span>(self, node):
+<span class="py-more">... </span>        <span class="py-comment"># register load of identifiers not locally definied</span>
+<span class="py-more">... </span>        <span class="py-keyword">if</span> <span class="py-builtin">isinstance</span>(node.ctx, ast.Load):
+<span class="py-more">... </span>            <span class="py-keyword">if</span> node <span class="py-keyword">not</span> <span class="py-keyword">in</span> self.users:
+<span class="py-more">... </span>                self.captured.add(node.id)
+
+<span class="py-prompt">&gt;&gt;&gt; </span>code = <span class="py-string">'def foo(x):\n def bar(): return x\n return bar'</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>module = ast.parse(code)
+<span class="py-prompt">&gt;&gt;&gt; </span>inner_function = module.body[0].body[0]
+<span class="py-prompt">&gt;&gt;&gt; </span>capture = Capture(module)
+<span class="py-prompt">&gt;&gt;&gt; </span>capture.visit(inner_function)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-builtin">list</span>(capture.captured)
+[<span class="py-string">'x'</span>]</pre></div>
+<div class="rst-section" id="rst-compute-the-set-of-instructions-required-to-compute-a-function">
+<h3 class="heading">Compute the set of instructions required to compute a function</h3>
+<p>This is actually very similar to the computation of the closure, but this time
+let's use the UseDef chains combined with the ancestors.</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> gast <span class="py-keyword">as</span> ast
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> beniget
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">class</span> <span class="py-defname">CaptureX</span>(ast.NodeVisitor):
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, module_node, fun):
+<span class="py-more">... </span>        self.fun = fun
+<span class="py-more">... </span>        <span class="py-comment"># initialize use-def chains</span>
+<span class="py-more">... </span>        du = beniget.DefUseChains()
+<span class="py-more">... </span>        du.visit(module_node)
+<span class="py-more">... </span>        self.chains = beniget.UseDefChains(du)
+<span class="py-more">... </span>        self.ancestors = beniget.Ancestors()
+<span class="py-more">... </span>        self.ancestors.visit(module_node)
+<span class="py-more">... </span>        self.external = <span class="py-builtin">list</span>()
+<span class="py-more">... </span>        self.visited_external = <span class="py-builtin">set</span>()
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">visit_Name</span>(self, node):
+<span class="py-more">... </span>        <span class="py-comment"># register load of identifiers not locally defined</span>
+<span class="py-more">... </span>        <span class="py-keyword">if</span> <span class="py-builtin">isinstance</span>(node.ctx, ast.Load):
+<span class="py-more">... </span>            uses = self.chains.chains[node]
+<span class="py-more">... </span>            <span class="py-keyword">for</span> use <span class="py-keyword">in</span> uses:
+<span class="py-more">... </span>                <span class="py-keyword">try</span>:
+<span class="py-more">... </span>                    parents = self.ancestors.parents(use.node)
+<span class="py-more">... </span>                <span class="py-keyword">except</span> <span class="py-builtin">KeyError</span>:
+<span class="py-more">... </span>                    <span class="py-keyword">return</span> <span class="py-comment"># a builtin</span>
+<span class="py-more">... </span>                <span class="py-keyword">if</span> self.fun <span class="py-keyword">not</span> <span class="py-keyword">in</span> parents:
+<span class="py-more">... </span>                        parent = self.ancestors.parentStmt(use.node)
+<span class="py-more">... </span>                        <span class="py-keyword">if</span> parent <span class="py-keyword">not</span> <span class="py-keyword">in</span> self.visited_external:
+<span class="py-more">... </span>                            self.visited_external.add(parent)
+<span class="py-more">... </span>                            self.external.append(parent)
+<span class="py-more">... </span>                            self.rec(parent)
+<span class="py-more">...</span>
+<span class="py-more">... </span>    <span class="py-keyword">def</span> <span class="py-defname">rec</span>(self, node):
+<span class="py-more">... </span>        <span class="py-string">"walk definitions to find their operands's def"</span>
+<span class="py-more">... </span>        <span class="py-keyword">if</span> <span class="py-builtin">isinstance</span>(node, ast.Assign):
+<span class="py-more">... </span>            self.visit(node.value)
+<span class="py-more">... </span>        <span class="py-comment"># TODO: implement this for AugAssign etc</span>
+
+
+<span class="py-prompt">&gt;&gt;&gt; </span>code = <span class="py-string">'a = 1; b = [a, a]; c = len(b)\ndef foo():\n return c'</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>module = ast.parse(code)
+<span class="py-prompt">&gt;&gt;&gt; </span>function = module.body[3]
+<span class="py-prompt">&gt;&gt;&gt; </span>capturex = CaptureX(module, function)
+<span class="py-prompt">&gt;&gt;&gt; </span>capturex.visit(function)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-comment"># the three top level assignments have been captured!</span>
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-builtin">list</span>(<span class="py-builtin">map</span>(<span class="py-builtin">type</span>, capturex.external))
+[&lt;<span class="py-keyword">class</span> <span class="py-string">'gast.gast.Assign'</span>&gt;, &lt;<span class="py-keyword">class</span> <span class="py-string">'gast.gast.Assign'</span>&gt;, &lt;<span class="py-keyword">class</span> <span class="py-string">'gast.gast.Assign'</span>&gt;]</pre></div>
+</div>
+<div class="rst-section" id="rst-acknowledgments">
+<h2 class="heading">Acknowledgments</h2>
+<p>Beniget is in Pierre Augier's debt, for he triggered the birth of beniget and provided
+countless meaningful bug reports and advices. Trugarez!</p>
+</div>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id1">
+  
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><code><a href="beniget.beniget.html" class="internal-link" title="beniget.beniget">beniget</a></code></td>
+    <td><span class="undocumented">No module docstring; 0/4 variable, 6/9 functions, 0/1 exception, 0/2 class documented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><code><a href="beniget.ordered_set.html" class="internal-link" title="beniget.ordered_set">ordered<wbr></wbr>_set</a></code></td>
+    <td>Copied from <a class="rst-external rst-reference" href="https://github.com/bustawin/ordered-set-37" target="_top">https://github.com/bustawin/ordered-set-37</a></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><code><a href="beniget.version.html" class="internal-link" title="beniget.version">version</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module private">
+    
+    <td>Module</td>
+    <td><code><a href="beniget.__main__.html" class="internal-link" title="beniget.__main__">__main__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            <p class="fromInitPy">From <code>__init__.py</code>:</p><table class="children sortable" id="id2">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="beniget.Ancestors.html" class="internal-link" title="beniget.Ancestors"><wbr></wbr>Ancestors</a></code></td>
+    <td>Build the ancestor tree, that associates a node to the list of node visited from the root node (the Module) to the current node.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="beniget.Def.html" class="internal-link" title="beniget.Def"><wbr></wbr>Def</a></code></td>
+    <td>Model a definition, either named or unnamed, and its users.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="beniget.DefUseChains.html" class="internal-link" title="beniget.DefUseChains"><wbr></wbr>Def<wbr></wbr>Use<wbr></wbr>Chains</a></code></td>
+    <td>locals: Dict[node, List[Def]], a mapping between a node and the list of variable defined in this node,</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="beniget.UseDefChains.html" class="internal-link" title="beniget.UseDefChains"><wbr></wbr>Use<wbr></wbr>Def<wbr></wbr>Chains</a></code></td>
+    <td>DefUseChains adaptor that builds a mapping between each user and the Def that defines this user:</td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#__version__" class="internal-link" title="beniget.__version__">__version__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        </div>
+
+        <div id="childList">
+          <div class="basevariable">
+  
+  
+  <a name="beniget.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__version__</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/version.py#L1">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__version__" title="beniget.__version__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/tristanlatr/beniget" class="projecthome">Gast, Beniget!</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.2 at 2025-01-28 04:20:41.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

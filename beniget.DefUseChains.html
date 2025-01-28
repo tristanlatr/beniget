@@ -1,0 +1,5161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>beniget.DefUseChains</title>
+    <meta name="generator" content="pydoctor 24.11.2"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    <link rel="canonical" href="https://tristanlatr.github.io/beniget/beniget.DefUseChains.html" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/tristanlatr/beniget" class="projecthome">Gast, Beniget!</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="beniget.DefUseChains.html" class="internal-link" title="This class"><wbr></wbr>Def<wbr></wbr>Use<wbr></wbr>Chains</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add_to_definition" class="internal-link" title="beniget.DefUseChains.add_to_definition">add<wbr></wbr>_to<wbr></wbr>_definition</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="beniget.DefUseChains.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add_to_locals" class="internal-link" title="beniget.DefUseChains.add_to_locals">add<wbr></wbr>_to<wbr></wbr>_locals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#compute_annotation_defs" class="internal-link" title="beniget.DefUseChains.compute_annotation_defs">compute<wbr></wbr>_annotation<wbr></wbr>_defs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#compute_defs" class="internal-link" title="beniget.DefUseChains.compute_defs">compute<wbr></wbr>_defs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DefinitionContext" class="internal-link" title="beniget.DefUseChains.DefinitionContext"><wbr></wbr>Definition<wbr></wbr>Context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dump_chains" class="internal-link" title="beniget.DefUseChains.dump_chains">dump<wbr></wbr>_chains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dump_definitions" class="internal-link" title="beniget.DefUseChains.dump_definitions">dump<wbr></wbr>_definitions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#extend_definition" class="internal-link" title="beniget.DefUseChains.extend_definition">extend<wbr></wbr>_definition</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#extend_global" class="internal-link" title="beniget.DefUseChains.extend_global">extend<wbr></wbr>_global</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#invalid_name_lookup" class="internal-link" title="beniget.DefUseChains.invalid_name_lookup">invalid<wbr></wbr>_name<wbr></wbr>_lookup</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_global" class="internal-link" title="beniget.DefUseChains.is_global">is<wbr></wbr>_global</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_nonlocal" class="internal-link" title="beniget.DefUseChains.is_nonlocal">is<wbr></wbr>_nonlocal</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#location" class="internal-link" title="beniget.DefUseChains.location">location</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#process_annotations" class="internal-link" title="beniget.DefUseChains.process_annotations">process<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#process_body" class="internal-link" title="beniget.DefUseChains.process_body">process<wbr></wbr>_body</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#process_functions_bodies" class="internal-link" title="beniget.DefUseChains.process_functions_bodies">process<wbr></wbr>_functions<wbr></wbr>_bodies</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#process_undefs" class="internal-link" title="beniget.DefUseChains.process_undefs">process<wbr></wbr>_undefs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ScopeContext" class="internal-link" title="beniget.DefUseChains.ScopeContext"><wbr></wbr>Scope<wbr></wbr>Context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_definition" class="internal-link" title="beniget.DefUseChains.set_definition">set<wbr></wbr>_definition</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_or_extend_global" class="internal-link" title="beniget.DefUseChains.set_or_extend_global">set<wbr></wbr>_or<wbr></wbr>_extend<wbr></wbr>_global</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SwitchScopeContext" class="internal-link" title="beniget.DefUseChains.SwitchScopeContext"><wbr></wbr>Switch<wbr></wbr>Scope<wbr></wbr>Context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#unbound_identifier" class="internal-link" title="beniget.DefUseChains.unbound_identifier">unbound<wbr></wbr>_identifier</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_AnnAssign" class="internal-link" title="beniget.DefUseChains.visit_AnnAssign">visit_<wbr></wbr>Ann<wbr></wbr>Assign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_annotation" class="internal-link" title="beniget.DefUseChains.visit_annotation">visit<wbr></wbr>_annotation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_arguments" class="internal-link" title="beniget.DefUseChains.visit_arguments">visit<wbr></wbr>_arguments</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Assert" class="internal-link" title="beniget.DefUseChains.visit_Assert">visit_<wbr></wbr>Assert</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Assign" class="internal-link" title="beniget.DefUseChains.visit_Assign">visit_<wbr></wbr>Assign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_AugAssign" class="internal-link" title="beniget.DefUseChains.visit_AugAssign">visit_<wbr></wbr>Aug<wbr></wbr>Assign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Await" class="internal-link" title="beniget.DefUseChains.visit_Await">visit_<wbr></wbr>Await</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_BinOp" class="internal-link" title="beniget.DefUseChains.visit_BinOp">visit_<wbr></wbr>Bin<wbr></wbr>Op</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_BoolOp" class="internal-link" title="beniget.DefUseChains.visit_BoolOp">visit_<wbr></wbr>Bool<wbr></wbr>Op</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Break" class="internal-link" title="beniget.DefUseChains.visit_Break">visit_<wbr></wbr>Break</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Call" class="internal-link" title="beniget.DefUseChains.visit_Call">visit_<wbr></wbr>Call</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_ClassDef" class="internal-link" title="beniget.DefUseChains.visit_ClassDef">visit_<wbr></wbr>Class<wbr></wbr>Def</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Compare" class="internal-link" title="beniget.DefUseChains.visit_Compare">visit_<wbr></wbr>Compare</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_comprehension" class="internal-link" title="beniget.DefUseChains.visit_comprehension">visit<wbr></wbr>_comprehension</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Constant" class="internal-link" title="beniget.DefUseChains.visit_Constant">visit_<wbr></wbr>Constant</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Continue" class="internal-link" title="beniget.DefUseChains.visit_Continue">visit_<wbr></wbr>Continue</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Delete" class="internal-link" title="beniget.DefUseChains.visit_Delete">visit_<wbr></wbr>Delete</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Destructured" class="internal-link" title="beniget.DefUseChains.visit_Destructured">visit_<wbr></wbr>Destructured</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Dict" class="internal-link" title="beniget.DefUseChains.visit_Dict">visit_<wbr></wbr>Dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_DictComp" class="internal-link" title="beniget.DefUseChains.visit_DictComp">visit_<wbr></wbr>Dict<wbr></wbr>Comp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_excepthandler" class="internal-link" title="beniget.DefUseChains.visit_excepthandler">visit<wbr></wbr>_excepthandler</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Expr" class="internal-link" title="beniget.DefUseChains.visit_Expr">visit_<wbr></wbr>Expr</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_For" class="internal-link" title="beniget.DefUseChains.visit_For">visit_<wbr></wbr>For</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_FormattedValue" class="internal-link" title="beniget.DefUseChains.visit_FormattedValue">visit_<wbr></wbr>Formatted<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_FunctionDef" class="internal-link" title="beniget.DefUseChains.visit_FunctionDef">visit_<wbr></wbr>Function<wbr></wbr>Def</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Global" class="internal-link" title="beniget.DefUseChains.visit_Global">visit_<wbr></wbr>Global</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_If" class="internal-link" title="beniget.DefUseChains.visit_If">visit_<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_IfExp" class="internal-link" title="beniget.DefUseChains.visit_IfExp">visit_<wbr></wbr>If<wbr></wbr>Exp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Import" class="internal-link" title="beniget.DefUseChains.visit_Import">visit_<wbr></wbr>Import</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_ImportFrom" class="internal-link" title="beniget.DefUseChains.visit_ImportFrom">visit_<wbr></wbr>Import<wbr></wbr>From</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_JoinedStr" class="internal-link" title="beniget.DefUseChains.visit_JoinedStr">visit_<wbr></wbr>Joined<wbr></wbr>Str</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Lambda" class="internal-link" title="beniget.DefUseChains.visit_Lambda">visit_<wbr></wbr>Lambda</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_List" class="internal-link" title="beniget.DefUseChains.visit_List">visit_<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_ListComp" class="internal-link" title="beniget.DefUseChains.visit_ListComp">visit_<wbr></wbr>List<wbr></wbr>Comp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Match" class="internal-link" title="beniget.DefUseChains.visit_Match">visit_<wbr></wbr>Match</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchAs" class="internal-link" title="beniget.DefUseChains.visit_MatchAs">visit_<wbr></wbr>Match<wbr></wbr>As</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchClass" class="internal-link" title="beniget.DefUseChains.visit_MatchClass">visit_<wbr></wbr>Match<wbr></wbr>Class</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchMapping" class="internal-link" title="beniget.DefUseChains.visit_MatchMapping">visit_<wbr></wbr>Match<wbr></wbr>Mapping</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchOr" class="internal-link" title="beniget.DefUseChains.visit_MatchOr">visit_<wbr></wbr>Match<wbr></wbr>Or</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchSequence" class="internal-link" title="beniget.DefUseChains.visit_MatchSequence">visit_<wbr></wbr>Match<wbr></wbr>Sequence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchStar" class="internal-link" title="beniget.DefUseChains.visit_MatchStar">visit_<wbr></wbr>Match<wbr></wbr>Star</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_MatchValue" class="internal-link" title="beniget.DefUseChains.visit_MatchValue">visit_<wbr></wbr>Match<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Module" class="internal-link" title="beniget.DefUseChains.visit_Module">visit_<wbr></wbr>Module</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Name" class="internal-link" title="beniget.DefUseChains.visit_Name">visit_<wbr></wbr>Name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_NamedExpr" class="internal-link" title="beniget.DefUseChains.visit_NamedExpr">visit_<wbr></wbr>Named<wbr></wbr>Expr</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Nonlocal" class="internal-link" title="beniget.DefUseChains.visit_Nonlocal">visit_<wbr></wbr>Nonlocal</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Raise" class="internal-link" title="beniget.DefUseChains.visit_Raise">visit_<wbr></wbr>Raise</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Return" class="internal-link" title="beniget.DefUseChains.visit_Return">visit_<wbr></wbr>Return</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Set" class="internal-link" title="beniget.DefUseChains.visit_Set">visit_<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_skip_annotation" class="internal-link" title="beniget.DefUseChains.visit_skip_annotation">visit<wbr></wbr>_skip<wbr></wbr>_annotation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Slice" class="internal-link" title="beniget.DefUseChains.visit_Slice">visit_<wbr></wbr>Slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Starred" class="internal-link" title="beniget.DefUseChains.visit_Starred">visit_<wbr></wbr>Starred</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Subscript" class="internal-link" title="beniget.DefUseChains.visit_Subscript">visit_<wbr></wbr>Subscript</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Try" class="internal-link" title="beniget.DefUseChains.visit_Try">visit_<wbr></wbr>Try</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_UnaryOp" class="internal-link" title="beniget.DefUseChains.visit_UnaryOp">visit_<wbr></wbr>Unary<wbr></wbr>Op</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_While" class="internal-link" title="beniget.DefUseChains.visit_While">visit_<wbr></wbr>While</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_With" class="internal-link" title="beniget.DefUseChains.visit_With">visit_<wbr></wbr>With</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_withitem" class="internal-link" title="beniget.DefUseChains.visit_withitem">visit<wbr></wbr>_withitem</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Yield" class="internal-link" title="beniget.DefUseChains.visit_Yield">visit_<wbr></wbr>Yield</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#warn" class="internal-link" title="beniget.DefUseChains.warn">warn</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_dump_locals" class="internal-link" title="beniget.DefUseChains._dump_locals">_dump<wbr></wbr>_locals</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_first_non_comprehension_scope" class="internal-link" title="beniget.DefUseChains._first_non_comprehension_scope">_first<wbr></wbr>_non<wbr></wbr>_comprehension<wbr></wbr>_scope</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_support_stdlib" class="internal-link" title="beniget.DefUseChains._support_stdlib">_support<wbr></wbr>_stdlib</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#chains" class="internal-link" title="beniget.DefUseChains.chains">chains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#defs" class="internal-link" title="beniget.DefUseChains.defs">defs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#filename" class="internal-link" title="beniget.DefUseChains.filename">filename</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#future_annotations" class="internal-link" title="beniget.DefUseChains.future_annotations">future<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#locals" class="internal-link" title="beniget.DefUseChains.locals">locals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#module" class="internal-link" title="beniget.DefUseChains.module">module</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_arg" class="internal-link" title="beniget.DefUseChains.visit_arg">visit<wbr></wbr>_arg</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Bytes" class="internal-link" title="beniget.DefUseChains.visit_Bytes">visit_<wbr></wbr>Bytes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Ellipsis" class="internal-link" title="beniget.DefUseChains.visit_Ellipsis">visit_<wbr></wbr>Ellipsis</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_ExceptHandler" class="internal-link" title="beniget.DefUseChains.visit_ExceptHandler">visit_<wbr></wbr>Except<wbr></wbr>Handler</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_ExtSlice" class="internal-link" title="beniget.DefUseChains.visit_ExtSlice">visit_<wbr></wbr>Ext<wbr></wbr>Slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Index" class="internal-link" title="beniget.DefUseChains.visit_Index">visit_<wbr></wbr>Index</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_NameConstant" class="internal-link" title="beniget.DefUseChains.visit_NameConstant">visit_<wbr></wbr>Name<wbr></wbr>Constant</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Num" class="internal-link" title="beniget.DefUseChains.visit_Num">visit_<wbr></wbr>Num</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#visit_Str" class="internal-link" title="beniget.DefUseChains.visit_Str">visit_<wbr></wbr>Str</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_breaks" class="internal-link" title="beniget.DefUseChains._breaks">_breaks</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_builtins" class="internal-link" title="beniget.DefUseChains._builtins">_builtins</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_continues" class="internal-link" title="beniget.DefUseChains._continues">_continues</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_deadcode" class="internal-link" title="beniget.DefUseChains._deadcode">_deadcode</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_defered" class="internal-link" title="beniget.DefUseChains._defered">_defered</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_defered_annotations" class="internal-link" title="beniget.DefUseChains._defered_annotations">_defered<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_definitions" class="internal-link" title="beniget.DefUseChains._definitions">_definitions</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_globals" class="internal-link" title="beniget.DefUseChains._globals">_globals</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_nonlocals" class="internal-link" title="beniget.DefUseChains._nonlocals">_nonlocals</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_precomputed_locals" class="internal-link" title="beniget.DefUseChains._precomputed_locals">_precomputed<wbr></wbr>_locals</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_scope_depths" class="internal-link" title="beniget.DefUseChains._scope_depths">_scope<wbr></wbr>_depths</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_scopes" class="internal-link" title="beniget.DefUseChains._scopes">_scopes</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_undefs" class="internal-link" title="beniget.DefUseChains._undefs">_undefs</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this class">beniget</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.beniget.html" class="internal-link" title="beniget.beniget">beniget</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.ordered_set.html" class="internal-link" title="beniget.ordered_set">ordered<wbr></wbr>_set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.version.html" class="internal-link" title="beniget.version">version</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.__main__.html" class="internal-link" title="beniget.__main__">__main__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.Ancestors.html" class="internal-link" title="beniget.Ancestors"><wbr></wbr>Ancestors</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.Def.html" class="internal-link" title="beniget.Def"><wbr></wbr>Def</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.DefUseChains.html" class="internal-link" title="beniget.DefUseChains"><wbr></wbr>Def<wbr></wbr>Use<wbr></wbr>Chains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="beniget.UseDefChains.html" class="internal-link" title="beniget.UseDefChains"><wbr></wbr>Use<wbr></wbr>Def<wbr></wbr>Chains</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#__version__" class="internal-link" title="beniget.__version__">__version__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">beniget</a></code><wbr></wbr>.<code><a href="beniget.DefUseChains.html" class="internal-link" title="beniget.DefUseChains">DefUseChains</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">DefUseChains</span>(gast.NodeVisitor): <a href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L304" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="beniget.DefUseChains.__init__">DefUseChains(filename)</a></code></p>
+          <p><a href="classIndex.html#beniget.DefUseChains">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p><dl class="rst-docutils">
+<dt>Module visitor that gathers two kinds of informations:</dt>
+<dd><ul class="rst-simple rst-first rst-last">
+<li>locals: Dict[node, List[Def]], a mapping between a node and the list
+of variable defined in this node,</li>
+<li>chains: Dict[node, Def], a mapping between nodes and their chains.</li>
+</ul>
+</dd>
+</dl>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> gast <span class="py-keyword">as</span> ast
+<span class="py-prompt">&gt;&gt;&gt; </span>module = ast.parse(<span class="py-string">"from b import c, d; c()"</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>duc = DefUseChains()
+<span class="py-prompt">&gt;&gt;&gt; </span>duc.visit(module)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">for</span> head <span class="py-keyword">in</span> duc.locals[module]:
+<span class="py-more">... </span>    <span class="py-builtin">print</span>(<span class="py-string">"{}: {}"</span>.format(head.name(), <span class="py-builtin">len</span>(head.users())))
+<span class="py-output">c: 1</span>
+<span class="py-output">d: 0</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>alias_def = duc.chains[module.body[0].names[0]]
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-builtin">print</span>(alias_def)
+<span class="py-output">c -&gt; (c -&gt; (&lt;Call&gt; -&gt; ()))</span>
+</pre><p>One instance of DefUseChains is only suitable to analyse one AST Module in it's lifecycle.</p>
+</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id11">
+  
+  
+  <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#add_to_definition" class="internal-link" title="beniget.DefUseChains.add_to_definition">add<wbr></wbr>_to<wbr></wbr>_definition</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="beniget.DefUseChains.__init__">__init__</a></code></td>
+    <td>filename: str, included in error messages if specified</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_to_locals" class="internal-link" title="beniget.DefUseChains.add_to_locals">add<wbr></wbr>_to<wbr></wbr>_locals</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#compute_annotation_defs" class="internal-link" title="beniget.DefUseChains.compute_annotation_defs">compute<wbr></wbr>_annotation<wbr></wbr>_defs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#compute_defs" class="internal-link" title="beniget.DefUseChains.compute_defs">compute<wbr></wbr>_defs</a></code></td>
+    <td>Performs an actual lookup of node's id in current context, returning the list of def linked to that use.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#DefinitionContext" class="internal-link" title="beniget.DefUseChains.DefinitionContext"><wbr></wbr>Definition<wbr></wbr>Context</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#dump_chains" class="internal-link" title="beniget.DefUseChains.dump_chains">dump<wbr></wbr>_chains</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#dump_definitions" class="internal-link" title="beniget.DefUseChains.dump_definitions">dump<wbr></wbr>_definitions</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#extend_definition" class="internal-link" title="beniget.DefUseChains.extend_definition">extend<wbr></wbr>_definition</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#extend_global" class="internal-link" title="beniget.DefUseChains.extend_global">extend<wbr></wbr>_global</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#invalid_name_lookup" class="internal-link" title="beniget.DefUseChains.invalid_name_lookup">invalid<wbr></wbr>_name<wbr></wbr>_lookup</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#is_global" class="internal-link" title="beniget.DefUseChains.is_global">is<wbr></wbr>_global</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#is_nonlocal" class="internal-link" title="beniget.DefUseChains.is_nonlocal">is<wbr></wbr>_nonlocal</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#location" class="internal-link" title="beniget.DefUseChains.location">location</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#process_annotations" class="internal-link" title="beniget.DefUseChains.process_annotations">process<wbr></wbr>_annotations</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#process_body" class="internal-link" title="beniget.DefUseChains.process_body">process<wbr></wbr>_body</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#process_functions_bodies" class="internal-link" title="beniget.DefUseChains.process_functions_bodies">process<wbr></wbr>_functions<wbr></wbr>_bodies</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#process_undefs" class="internal-link" title="beniget.DefUseChains.process_undefs">process<wbr></wbr>_undefs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#ScopeContext" class="internal-link" title="beniget.DefUseChains.ScopeContext"><wbr></wbr>Scope<wbr></wbr>Context</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_definition" class="internal-link" title="beniget.DefUseChains.set_definition">set<wbr></wbr>_definition</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_or_extend_global" class="internal-link" title="beniget.DefUseChains.set_or_extend_global">set<wbr></wbr>_or<wbr></wbr>_extend<wbr></wbr>_global</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#SwitchScopeContext" class="internal-link" title="beniget.DefUseChains.SwitchScopeContext"><wbr></wbr>Switch<wbr></wbr>Scope<wbr></wbr>Context</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#unbound_identifier" class="internal-link" title="beniget.DefUseChains.unbound_identifier">unbound<wbr></wbr>_identifier</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_AnnAssign" class="internal-link" title="beniget.DefUseChains.visit_AnnAssign">visit_<wbr></wbr>Ann<wbr></wbr>Assign</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_annotation" class="internal-link" title="beniget.DefUseChains.visit_annotation">visit<wbr></wbr>_annotation</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_arguments" class="internal-link" title="beniget.DefUseChains.visit_arguments">visit<wbr></wbr>_arguments</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Assert" class="internal-link" title="beniget.DefUseChains.visit_Assert">visit_<wbr></wbr>Assert</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Assign" class="internal-link" title="beniget.DefUseChains.visit_Assign">visit_<wbr></wbr>Assign</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_AugAssign" class="internal-link" title="beniget.DefUseChains.visit_AugAssign">visit_<wbr></wbr>Aug<wbr></wbr>Assign</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Await" class="internal-link" title="beniget.DefUseChains.visit_Await">visit_<wbr></wbr>Await</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_BinOp" class="internal-link" title="beniget.DefUseChains.visit_BinOp">visit_<wbr></wbr>Bin<wbr></wbr>Op</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_BoolOp" class="internal-link" title="beniget.DefUseChains.visit_BoolOp">visit_<wbr></wbr>Bool<wbr></wbr>Op</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Break" class="internal-link" title="beniget.DefUseChains.visit_Break">visit_<wbr></wbr>Break</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Call" class="internal-link" title="beniget.DefUseChains.visit_Call">visit_<wbr></wbr>Call</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_ClassDef" class="internal-link" title="beniget.DefUseChains.visit_ClassDef">visit_<wbr></wbr>Class<wbr></wbr>Def</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Compare" class="internal-link" title="beniget.DefUseChains.visit_Compare">visit_<wbr></wbr>Compare</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_comprehension" class="internal-link" title="beniget.DefUseChains.visit_comprehension">visit<wbr></wbr>_comprehension</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Constant" class="internal-link" title="beniget.DefUseChains.visit_Constant">visit_<wbr></wbr>Constant</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Continue" class="internal-link" title="beniget.DefUseChains.visit_Continue">visit_<wbr></wbr>Continue</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Delete" class="internal-link" title="beniget.DefUseChains.visit_Delete">visit_<wbr></wbr>Delete</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Destructured" class="internal-link" title="beniget.DefUseChains.visit_Destructured">visit_<wbr></wbr>Destructured</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Dict" class="internal-link" title="beniget.DefUseChains.visit_Dict">visit_<wbr></wbr>Dict</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_DictComp" class="internal-link" title="beniget.DefUseChains.visit_DictComp">visit_<wbr></wbr>Dict<wbr></wbr>Comp</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_excepthandler" class="internal-link" title="beniget.DefUseChains.visit_excepthandler">visit<wbr></wbr>_excepthandler</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Expr" class="internal-link" title="beniget.DefUseChains.visit_Expr">visit_<wbr></wbr>Expr</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_For" class="internal-link" title="beniget.DefUseChains.visit_For">visit_<wbr></wbr>For</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_FormattedValue" class="internal-link" title="beniget.DefUseChains.visit_FormattedValue">visit_<wbr></wbr>Formatted<wbr></wbr>Value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_FunctionDef" class="internal-link" title="beniget.DefUseChains.visit_FunctionDef">visit_<wbr></wbr>Function<wbr></wbr>Def</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Global" class="internal-link" title="beniget.DefUseChains.visit_Global">visit_<wbr></wbr>Global</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_If" class="internal-link" title="beniget.DefUseChains.visit_If">visit_<wbr></wbr>If</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_IfExp" class="internal-link" title="beniget.DefUseChains.visit_IfExp">visit_<wbr></wbr>If<wbr></wbr>Exp</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Import" class="internal-link" title="beniget.DefUseChains.visit_Import">visit_<wbr></wbr>Import</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_ImportFrom" class="internal-link" title="beniget.DefUseChains.visit_ImportFrom">visit_<wbr></wbr>Import<wbr></wbr>From</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_JoinedStr" class="internal-link" title="beniget.DefUseChains.visit_JoinedStr">visit_<wbr></wbr>Joined<wbr></wbr>Str</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Lambda" class="internal-link" title="beniget.DefUseChains.visit_Lambda">visit_<wbr></wbr>Lambda</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_List" class="internal-link" title="beniget.DefUseChains.visit_List">visit_<wbr></wbr>List</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_ListComp" class="internal-link" title="beniget.DefUseChains.visit_ListComp">visit_<wbr></wbr>List<wbr></wbr>Comp</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Match" class="internal-link" title="beniget.DefUseChains.visit_Match">visit_<wbr></wbr>Match</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchAs" class="internal-link" title="beniget.DefUseChains.visit_MatchAs">visit_<wbr></wbr>Match<wbr></wbr>As</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchClass" class="internal-link" title="beniget.DefUseChains.visit_MatchClass">visit_<wbr></wbr>Match<wbr></wbr>Class</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchMapping" class="internal-link" title="beniget.DefUseChains.visit_MatchMapping">visit_<wbr></wbr>Match<wbr></wbr>Mapping</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchOr" class="internal-link" title="beniget.DefUseChains.visit_MatchOr">visit_<wbr></wbr>Match<wbr></wbr>Or</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchSequence" class="internal-link" title="beniget.DefUseChains.visit_MatchSequence">visit_<wbr></wbr>Match<wbr></wbr>Sequence</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchStar" class="internal-link" title="beniget.DefUseChains.visit_MatchStar">visit_<wbr></wbr>Match<wbr></wbr>Star</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_MatchValue" class="internal-link" title="beniget.DefUseChains.visit_MatchValue">visit_<wbr></wbr>Match<wbr></wbr>Value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Module" class="internal-link" title="beniget.DefUseChains.visit_Module">visit_<wbr></wbr>Module</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Name" class="internal-link" title="beniget.DefUseChains.visit_Name">visit_<wbr></wbr>Name</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_NamedExpr" class="internal-link" title="beniget.DefUseChains.visit_NamedExpr">visit_<wbr></wbr>Named<wbr></wbr>Expr</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Nonlocal" class="internal-link" title="beniget.DefUseChains.visit_Nonlocal">visit_<wbr></wbr>Nonlocal</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Raise" class="internal-link" title="beniget.DefUseChains.visit_Raise">visit_<wbr></wbr>Raise</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Return" class="internal-link" title="beniget.DefUseChains.visit_Return">visit_<wbr></wbr>Return</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Set" class="internal-link" title="beniget.DefUseChains.visit_Set">visit_<wbr></wbr>Set</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_skip_annotation" class="internal-link" title="beniget.DefUseChains.visit_skip_annotation">visit<wbr></wbr>_skip<wbr></wbr>_annotation</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Slice" class="internal-link" title="beniget.DefUseChains.visit_Slice">visit_<wbr></wbr>Slice</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Starred" class="internal-link" title="beniget.DefUseChains.visit_Starred">visit_<wbr></wbr>Starred</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Subscript" class="internal-link" title="beniget.DefUseChains.visit_Subscript">visit_<wbr></wbr>Subscript</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Try" class="internal-link" title="beniget.DefUseChains.visit_Try">visit_<wbr></wbr>Try</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_UnaryOp" class="internal-link" title="beniget.DefUseChains.visit_UnaryOp">visit_<wbr></wbr>Unary<wbr></wbr>Op</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_While" class="internal-link" title="beniget.DefUseChains.visit_While">visit_<wbr></wbr>While</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_With" class="internal-link" title="beniget.DefUseChains.visit_With">visit_<wbr></wbr>With</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_withitem" class="internal-link" title="beniget.DefUseChains.visit_withitem">visit<wbr></wbr>_withitem</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#visit_Yield" class="internal-link" title="beniget.DefUseChains.visit_Yield">visit_<wbr></wbr>Yield</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#warn" class="internal-link" title="beniget.DefUseChains.warn">warn</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#chains" class="internal-link" title="beniget.DefUseChains.chains">chains</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#defs" class="internal-link" title="beniget.DefUseChains.defs">defs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#filename" class="internal-link" title="beniget.DefUseChains.filename">filename</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#future_annotations" class="internal-link" title="beniget.DefUseChains.future_annotations">future<wbr></wbr>_annotations</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#locals" class="internal-link" title="beniget.DefUseChains.locals">locals</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#module" class="internal-link" title="beniget.DefUseChains.module">module</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_arg" class="internal-link" title="beniget.DefUseChains.visit_arg">visit<wbr></wbr>_arg</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_Bytes" class="internal-link" title="beniget.DefUseChains.visit_Bytes">visit_<wbr></wbr>Bytes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_Ellipsis" class="internal-link" title="beniget.DefUseChains.visit_Ellipsis">visit_<wbr></wbr>Ellipsis</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_ExceptHandler" class="internal-link" title="beniget.DefUseChains.visit_ExceptHandler">visit_<wbr></wbr>Except<wbr></wbr>Handler</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_ExtSlice" class="internal-link" title="beniget.DefUseChains.visit_ExtSlice">visit_<wbr></wbr>Ext<wbr></wbr>Slice</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_Index" class="internal-link" title="beniget.DefUseChains.visit_Index">visit_<wbr></wbr>Index</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_NameConstant" class="internal-link" title="beniget.DefUseChains.visit_NameConstant">visit_<wbr></wbr>Name<wbr></wbr>Constant</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_Num" class="internal-link" title="beniget.DefUseChains.visit_Num">visit_<wbr></wbr>Num</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#visit_Str" class="internal-link" title="beniget.DefUseChains.visit_Str">visit_<wbr></wbr>Str</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_dump_locals" class="internal-link" title="beniget.DefUseChains._dump_locals">_dump<wbr></wbr>_locals</a></code></td>
+    <td>Like <code><a href="beniget.DefUseChains.html#dump_definitions" class="internal-link" title="beniget.DefUseChains.dump_definitions">dump_definitions</a></code> but returns the result grouped by symbol name and it includes linenos.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_first_non_comprehension_scope" class="internal-link" title="beniget.DefUseChains._first_non_comprehension_scope">_first<wbr></wbr>_non<wbr></wbr>_comprehension<wbr></wbr>_scope</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_support_stdlib" class="internal-link" title="beniget.DefUseChains._support_stdlib">_support<wbr></wbr>_stdlib</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_breaks" class="internal-link" title="beniget.DefUseChains._breaks">_breaks</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_builtins" class="internal-link" title="beniget.DefUseChains._builtins">_builtins</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_continues" class="internal-link" title="beniget.DefUseChains._continues">_continues</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_deadcode" class="internal-link" title="beniget.DefUseChains._deadcode">_deadcode</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_defered" class="internal-link" title="beniget.DefUseChains._defered">_defered</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_defered_annotations" class="internal-link" title="beniget.DefUseChains._defered_annotations">_defered<wbr></wbr>_annotations</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_definitions" class="internal-link" title="beniget.DefUseChains._definitions">_definitions</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_globals" class="internal-link" title="beniget.DefUseChains._globals">_globals</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_nonlocals" class="internal-link" title="beniget.DefUseChains._nonlocals">_nonlocals</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_precomputed_locals" class="internal-link" title="beniget.DefUseChains._precomputed_locals">_precomputed<wbr></wbr>_locals</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_scope_depths" class="internal-link" title="beniget.DefUseChains._scope_depths">_scope<wbr></wbr>_depths</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_scopes" class="internal-link" title="beniget.DefUseChains._scopes">_scopes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_undefs" class="internal-link" title="beniget.DefUseChains._undefs">_undefs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basestaticmethod">
+  
+  
+  <a name="beniget.DefUseChains.add_to_definition">
+    
+  </a>
+  <a name="add_to_definition">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">add_to_definition</span><span class="function-signature">(definition, name, dnode_or_dnodes)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L774">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#add_to_definition" title="beniget.DefUseChains.add_to_definition">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, filename=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L327">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__init__" title="beniget.DefUseChains.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p><ul class="rst-simple">
+<li>filename: str, included in error messages if specified</li>
+</ul>
+</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.add_to_locals">
+    
+  </a>
+  <a name="add_to_locals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_to_locals</span><span class="function-signature">(self, name, dnode)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1084">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#add_to_locals" title="beniget.DefUseChains.add_to_locals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.compute_annotation_defs">
+    
+  </a>
+  <a name="compute_annotation_defs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">compute_annotation_defs</span><span class="function-signature">(self, node, quiet=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L458">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#compute_annotation_defs" title="beniget.DefUseChains.compute_annotation_defs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.compute_defs">
+    
+  </a>
+  <a name="compute_defs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">compute_defs</span><span class="function-signature">(self, node, quiet=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L469">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#compute_defs" title="beniget.DefUseChains.compute_defs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Performs an actual lookup of node's id in current context, returning
+the list of def linked to that use.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.DefinitionContext">
+    
+  </a>
+  <a name="DefinitionContext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @contextmanager<br />
+    <span class="py-keyword">def</span> <span class="py-defname">DefinitionContext</span><span class="function-signature">(self, definitions)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L596">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#DefinitionContext" title="beniget.DefUseChains.DefinitionContext">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.dump_chains">
+    
+  </a>
+  <a name="dump_chains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">dump_chains</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L405">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#dump_chains" title="beniget.DefUseChains.dump_chains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.dump_definitions">
+    
+  </a>
+  <a name="dump_definitions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">dump_definitions</span><span class="function-signature">(self, node, ignore_builtins=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L397">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#dump_definitions" title="beniget.DefUseChains.dump_definitions">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.extend_definition">
+    
+  </a>
+  <a name="extend_definition">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">extend_definition</span><span class="function-signature">(self, name, dnode_or_dnodes)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L781">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#extend_definition" title="beniget.DefUseChains.extend_definition">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.extend_global">
+    
+  </a>
+  <a name="extend_global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">extend_global</span><span class="function-signature">(self, name, dnode_or_dnodes)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L787">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#extend_global" title="beniget.DefUseChains.extend_global">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.invalid_name_lookup">
+    
+  </a>
+  <a name="invalid_name_lookup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">invalid_name_lookup</span><span class="function-signature">(self, name, scope, precomputed_locals, local_defs)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L429">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#invalid_name_lookup" title="beniget.DefUseChains.invalid_name_lookup">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.is_global">
+    
+  </a>
+  <a name="is_global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_global</span><span class="function-signature">(self, name)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1295">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#is_global" title="beniget.DefUseChains.is_global">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.is_nonlocal">
+    
+  </a>
+  <a name="is_nonlocal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_nonlocal</span><span class="function-signature">(self, name)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1298">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#is_nonlocal" title="beniget.DefUseChains.is_nonlocal">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.location">
+    
+  </a>
+  <a name="location">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">location</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L411">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#location" title="beniget.DefUseChains.location">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.process_annotations">
+    
+  </a>
+  <a name="process_annotations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">process_annotations</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L624">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#process_annotations" title="beniget.DefUseChains.process_annotations">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.process_body">
+    
+  </a>
+  <a name="process_body">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">process_body</span><span class="function-signature">(self, stmts)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L550">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#process_body" title="beniget.DefUseChains.process_body">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.process_functions_bodies">
+    
+  </a>
+  <a name="process_functions_bodies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">process_functions_bodies</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L617">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#process_functions_bodies" title="beniget.DefUseChains.process_functions_bodies">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.process_undefs">
+    
+  </a>
+  <a name="process_undefs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">process_undefs</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L565">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#process_undefs" title="beniget.DefUseChains.process_undefs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.ScopeContext">
+    
+  </a>
+  <a name="ScopeContext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @contextmanager<br />
+    <span class="py-keyword">def</span> <span class="py-defname">ScopeContext</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L578">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#ScopeContext" title="beniget.DefUseChains.ScopeContext">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.set_definition">
+    
+  </a>
+  <a name="set_definition">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_definition</span><span class="function-signature">(self, name, dnode_or_dnodes, index=-1)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L748">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_definition" title="beniget.DefUseChains.set_definition">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.set_or_extend_global">
+    
+  </a>
+  <a name="set_or_extend_global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_or_extend_global</span><span class="function-signature">(self, name, dnode)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L801">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_or_extend_global" title="beniget.DefUseChains.set_or_extend_global">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.SwitchScopeContext">
+    
+  </a>
+  <a name="SwitchScopeContext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @contextmanager<br />
+    <span class="py-keyword">def</span> <span class="py-defname">SwitchScopeContext</span><span class="function-signature">(self, defs, scopes, scope_depths, precomputed_locals)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L605">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SwitchScopeContext" title="beniget.DefUseChains.SwitchScopeContext">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.unbound_identifier">
+    
+  </a>
+  <a name="unbound_identifier">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">unbound_identifier</span><span class="function-signature">(self, name, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L423">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#unbound_identifier" title="beniget.DefUseChains.unbound_identifier">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_AnnAssign">
+    
+  </a>
+  <a name="visit_AnnAssign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_AnnAssign</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L908">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_AnnAssign" title="beniget.DefUseChains.visit_AnnAssign">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_annotation">
+    
+  </a>
+  <a name="visit_annotation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_annotation</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L808">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_annotation" title="beniget.DefUseChains.visit_annotation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_arguments">
+    
+  </a>
+  <a name="visit_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_arguments</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1437">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_arguments" title="beniget.DefUseChains.visit_arguments">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Assert">
+    
+  </a>
+  <a name="visit_Assert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Assert</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1079">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Assert" title="beniget.DefUseChains.visit_Assert">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Assign">
+    
+  </a>
+  <a name="visit_Assign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Assign</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L902">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Assign" title="beniget.DefUseChains.visit_Assign">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_AugAssign">
+    
+  </a>
+  <a name="visit_AugAssign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_AugAssign</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L918">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_AugAssign" title="beniget.DefUseChains.visit_AugAssign">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Await">
+    
+  </a>
+  <a name="visit_Await">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Await</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1224">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Await" title="beniget.DefUseChains.visit_Await">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_BinOp">
+    
+  </a>
+  <a name="visit_BinOp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_BinOp</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1135">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_BinOp" title="beniget.DefUseChains.visit_BinOp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_BoolOp">
+    
+  </a>
+  <a name="visit_BoolOp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_BoolOp</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1129">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_BoolOp" title="beniget.DefUseChains.visit_BoolOp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Break">
+    
+  </a>
+  <a name="visit_Break">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Break</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L888">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Break" title="beniget.DefUseChains.visit_Break">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Call">
+    
+  </a>
+  <a name="visit_Call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Call</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1244">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Call" title="beniget.DefUseChains.visit_Call">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_ClassDef">
+    
+  </a>
+  <a name="visit_ClassDef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_ClassDef</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L866">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_ClassDef" title="beniget.DefUseChains.visit_ClassDef">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Compare">
+    
+  </a>
+  <a name="visit_Compare">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Compare</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1237">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Compare" title="beniget.DefUseChains.visit_Compare">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_comprehension">
+    
+  </a>
+  <a name="visit_comprehension">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_comprehension</span><span class="function-signature">(self, node, is_nested)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1411">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_comprehension" title="beniget.DefUseChains.visit_comprehension">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Constant">
+    
+  </a>
+  <a name="visit_Constant">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Constant</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1255">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Constant" title="beniget.DefUseChains.visit_Constant">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Continue">
+    
+  </a>
+  <a name="visit_Continue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Continue</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L893">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Continue" title="beniget.DefUseChains.visit_Continue">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Delete">
+    
+  </a>
+  <a name="visit_Delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Delete</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L898">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Delete" title="beniget.DefUseChains.visit_Delete">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Destructured">
+    
+  </a>
+  <a name="visit_Destructured">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Destructured</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1368">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Destructured" title="beniget.DefUseChains.visit_Destructured">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Dict">
+    
+  </a>
+  <a name="visit_Dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Dict</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1175">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Dict" title="beniget.DefUseChains.visit_Dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_DictComp">
+    
+  </a>
+  <a name="visit_DictComp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_DictComp</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1206">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_DictComp" title="beniget.DefUseChains.visit_DictComp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_excepthandler">
+    
+  </a>
+  <a name="visit_excepthandler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_excepthandler</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1428">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_excepthandler" title="beniget.DefUseChains.visit_excepthandler">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Expr">
+    
+  </a>
+  <a name="visit_Expr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Expr</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1125">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Expr" title="beniget.DefUseChains.visit_Expr">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_For">
+    
+  </a>
+  <a name="visit_For">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_For</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L938">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_For" title="beniget.DefUseChains.visit_For">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_FormattedValue">
+    
+  </a>
+  <a name="visit_FormattedValue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_FormattedValue</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1259">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_FormattedValue" title="beniget.DefUseChains.visit_FormattedValue">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_FunctionDef">
+    
+  </a>
+  <a name="visit_FunctionDef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_FunctionDef</span><span class="function-signature">(self, node, step=DeclarationStep)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L819">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_FunctionDef" title="beniget.DefUseChains.visit_FunctionDef">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Global">
+    
+  </a>
+  <a name="visit_Global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Global</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1106">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Global" title="beniget.DefUseChains.visit_Global">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_If">
+    
+  </a>
+  <a name="visit_If">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_If</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1027">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_If" title="beniget.DefUseChains.visit_If">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_IfExp">
+    
+  </a>
+  <a name="visit_IfExp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_IfExp</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1168">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_IfExp" title="beniget.DefUseChains.visit_IfExp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Import">
+    
+  </a>
+  <a name="visit_Import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Import</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1090">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Import" title="beniget.DefUseChains.visit_Import">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_ImportFrom">
+    
+  </a>
+  <a name="visit_ImportFrom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_ImportFrom</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1097">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_ImportFrom" title="beniget.DefUseChains.visit_ImportFrom">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_JoinedStr">
+    
+  </a>
+  <a name="visit_JoinedStr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_JoinedStr</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1266">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_JoinedStr" title="beniget.DefUseChains.visit_JoinedStr">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Lambda">
+    
+  </a>
+  <a name="visit_Lambda">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Lambda</span><span class="function-signature">(self, node, step=DeclarationStep)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1146">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Lambda" title="beniget.DefUseChains.visit_Lambda">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_List">
+    
+  </a>
+  <a name="visit_List">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_List</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1383">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_List" title="beniget.DefUseChains.visit_List">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_ListComp">
+    
+  </a>
+  <a name="visit_ListComp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_ListComp</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1189">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_ListComp" title="beniget.DefUseChains.visit_ListComp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Match">
+    
+  </a>
+  <a name="visit_Match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Match</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1450">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Match" title="beniget.DefUseChains.visit_Match">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchAs">
+    
+  </a>
+  <a name="visit_MatchAs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchAs</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1530">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchAs" title="beniget.DefUseChains.visit_MatchAs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchClass">
+    
+  </a>
+  <a name="visit_MatchClass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchClass</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1512">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchClass" title="beniget.DefUseChains.visit_MatchClass">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchMapping">
+    
+  </a>
+  <a name="visit_MatchMapping">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchMapping</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1502">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchMapping" title="beniget.DefUseChains.visit_MatchMapping">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchOr">
+    
+  </a>
+  <a name="visit_MatchOr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchOr</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1539">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchOr" title="beniget.DefUseChains.visit_MatchOr">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchSequence">
+    
+  </a>
+  <a name="visit_MatchSequence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchSequence</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1496">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchSequence" title="beniget.DefUseChains.visit_MatchSequence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchStar">
+    
+  </a>
+  <a name="visit_MatchStar">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchStar</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1522">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchStar" title="beniget.DefUseChains.visit_MatchStar">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_MatchValue">
+    
+  </a>
+  <a name="visit_MatchValue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_MatchValue</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1489">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_MatchValue" title="beniget.DefUseChains.visit_MatchValue">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Module">
+    
+  </a>
+  <a name="visit_Module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Module</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L688">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Module" title="beniget.DefUseChains.visit_Module">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Name">
+    
+  </a>
+  <a name="visit_Name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Name</span><span class="function-signature">(self, node, skip_annotation=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, named_expr=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1311">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Name" title="beniget.DefUseChains.visit_Name">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_NamedExpr">
+    
+  </a>
+  <a name="visit_NamedExpr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_NamedExpr</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1288">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_NamedExpr" title="beniget.DefUseChains.visit_NamedExpr">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Nonlocal">
+    
+  </a>
+  <a name="visit_Nonlocal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Nonlocal</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1110">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Nonlocal" title="beniget.DefUseChains.visit_Nonlocal">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Raise">
+    
+  </a>
+  <a name="visit_Raise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Raise</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1056">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Raise" title="beniget.DefUseChains.visit_Raise">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Return">
+    
+  </a>
+  <a name="visit_Return">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Return</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L884">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Return" title="beniget.DefUseChains.visit_Return">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Set">
+    
+  </a>
+  <a name="visit_Set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Set</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1183">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Set" title="beniget.DefUseChains.visit_Set">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_skip_annotation">
+    
+  </a>
+  <a name="visit_skip_annotation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_skip_annotation</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L813">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_skip_annotation" title="beniget.DefUseChains.visit_skip_annotation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Slice">
+    
+  </a>
+  <a name="visit_Slice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Slice</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1399">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Slice" title="beniget.DefUseChains.visit_Slice">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Starred">
+    
+  </a>
+  <a name="visit_Starred">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Starred</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1280">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Starred" title="beniget.DefUseChains.visit_Starred">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Subscript">
+    
+  </a>
+  <a name="visit_Subscript">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Subscript</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1274">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Subscript" title="beniget.DefUseChains.visit_Subscript">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Try">
+    
+  </a>
+  <a name="visit_Try">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Try</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1059">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Try" title="beniget.DefUseChains.visit_Try">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_UnaryOp">
+    
+  </a>
+  <a name="visit_UnaryOp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_UnaryOp</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1141">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_UnaryOp" title="beniget.DefUseChains.visit_UnaryOp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_While">
+    
+  </a>
+  <a name="visit_While">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_While</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L981">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_While" title="beniget.DefUseChains.visit_While">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_With">
+    
+  </a>
+  <a name="visit_With">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_With</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1049">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_With" title="beniget.DefUseChains.visit_With">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_withitem">
+    
+  </a>
+  <a name="visit_withitem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_withitem</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1441">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_withitem" title="beniget.DefUseChains.visit_withitem">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.visit_Yield">
+    
+  </a>
+  <a name="visit_Yield">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">visit_Yield</span><span class="function-signature">(self, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1229">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Yield" title="beniget.DefUseChains.visit_Yield">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="beniget.DefUseChains.warn">
+    
+  </a>
+  <a name="warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">warn</span><span class="function-signature">(self, msg, node)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L426">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#warn" title="beniget.DefUseChains.warn">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.chains">
+    
+  </a>
+  <a name="chains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">chains</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L331">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#chains" title="beniget.DefUseChains.chains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.defs">
+    
+  </a>
+  <a name="defs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">defs</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L625">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#defs" title="beniget.DefUseChains.defs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.filename">
+    
+  </a>
+  <a name="filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">filename</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L333">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#filename" title="beniget.DefUseChains.filename">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.future_annotations">
+    
+  </a>
+  <a name="future_annotations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">future_annotations</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L378">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#future_annotations" title="beniget.DefUseChains.future_annotations">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.locals">
+    
+  </a>
+  <a name="locals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">locals</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L332">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#locals" title="beniget.DefUseChains.locals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.module">
+    
+  </a>
+  <a name="module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">module</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L377">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#module" title="beniget.DefUseChains.module">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_arg">
+    
+  </a>
+  <a name="visit_arg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_arg</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L654">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_arg" title="beniget.DefUseChains.visit_arg">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_Bytes">
+    
+  </a>
+  <a name="visit_Bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_Bytes</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L684">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Bytes" title="beniget.DefUseChains.visit_Bytes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_Ellipsis">
+    
+  </a>
+  <a name="visit_Ellipsis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_Ellipsis</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L684">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Ellipsis" title="beniget.DefUseChains.visit_Ellipsis">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_ExceptHandler">
+    
+  </a>
+  <a name="visit_ExceptHandler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_ExceptHandler</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L668">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_ExceptHandler" title="beniget.DefUseChains.visit_ExceptHandler">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_ExtSlice">
+    
+  </a>
+  <a name="visit_ExtSlice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_ExtSlice</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L676">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_ExtSlice" title="beniget.DefUseChains.visit_ExtSlice">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_Index">
+    
+  </a>
+  <a name="visit_Index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_Index</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L682">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Index" title="beniget.DefUseChains.visit_Index">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_NameConstant">
+    
+  </a>
+  <a name="visit_NameConstant">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_NameConstant</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L684">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_NameConstant" title="beniget.DefUseChains.visit_NameConstant">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_Num">
+    
+  </a>
+  <a name="visit_Num">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_Num</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L684">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Num" title="beniget.DefUseChains.visit_Num">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="beniget.DefUseChains.visit_Str">
+    
+  </a>
+  <a name="visit_Str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">visit_Str</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L684">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#visit_Str" title="beniget.DefUseChains.visit_Str">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="beniget.DefUseChains._dump_locals">
+    
+  </a>
+  <a name="_dump_locals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_dump_locals</span><span class="function-signature">(self, node, only_live=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L383">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_dump_locals" title="beniget.DefUseChains._dump_locals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Like <code><a href="#dump_definitions" class="internal-link" title="beniget.DefUseChains.dump_definitions">dump_definitions</a></code> but returns the result grouped by symbol name and it includes linenos.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">List of string formatted like: '{symbol name}:{def lines}'</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="beniget.DefUseChains._first_non_comprehension_scope">
+    
+  </a>
+  <a name="_first_non_comprehension_scope">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_first_non_comprehension_scope</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L1301">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_first_non_comprehension_scope" title="beniget.DefUseChains._first_non_comprehension_scope">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="beniget.DefUseChains._support_stdlib">
+    
+  </a>
+  <a name="_support_stdlib">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_support_stdlib</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L634">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_support_stdlib" title="beniget.DefUseChains._support_stdlib">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._breaks">
+    
+  </a>
+  <a name="_breaks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_breaks</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L364">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_breaks" title="beniget.DefUseChains._breaks">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._builtins">
+    
+  </a>
+  <a name="_builtins">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_builtins</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L336">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_builtins" title="beniget.DefUseChains._builtins">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._continues">
+    
+  </a>
+  <a name="_continues">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_continues</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L365">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_continues" title="beniget.DefUseChains._continues">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._deadcode">
+    
+  </a>
+  <a name="_deadcode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_deadcode</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L374">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_deadcode" title="beniget.DefUseChains._deadcode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._defered">
+    
+  </a>
+  <a name="_defered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_defered</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L340">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_defered" title="beniget.DefUseChains._defered">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._defered_annotations">
+    
+  </a>
+  <a name="_defered_annotations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_defered_annotations</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L371">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_defered_annotations" title="beniget.DefUseChains._defered_annotations">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._definitions">
+    
+  </a>
+  <a name="_definitions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_definitions</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L343">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_definitions" title="beniget.DefUseChains._definitions">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._globals">
+    
+  </a>
+  <a name="_globals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_globals</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L349">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_globals" title="beniget.DefUseChains._globals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._nonlocals">
+    
+  </a>
+  <a name="_nonlocals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_nonlocals</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L352">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_nonlocals" title="beniget.DefUseChains._nonlocals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._precomputed_locals">
+    
+  </a>
+  <a name="_precomputed_locals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_precomputed_locals</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L355">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_precomputed_locals" title="beniget.DefUseChains._precomputed_locals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._scope_depths">
+    
+  </a>
+  <a name="_scope_depths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_scope_depths</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L346">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_scope_depths" title="beniget.DefUseChains._scope_depths">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._scopes">
+    
+  </a>
+  <a name="_scopes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_scopes</span> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L362">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_scopes" title="beniget.DefUseChains._scopes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="beniget.DefUseChains._undefs">
+    
+  </a>
+  <a name="_undefs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_undefs</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a></code> =
+    <a class="sourceLink" href="https://github.com/tristanlatr/beniget/tree/9446638076470b392318243fdf455de8020e6cb9/beniget/beniget.py#L359">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_undefs" title="beniget.DefUseChains._undefs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/tristanlatr/beniget" class="projecthome">Gast, Beniget!</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.2 at 2025-01-28 04:20:41.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
