@@ -589,7 +589,7 @@ class DefUseChains(gast.NodeVisitor):
             add_defs(looked_up_definitions, defs)
 
             ast = pkg(node)
-            # Iterate over scopes, filtering out class scopes, expect if the enclosing
+            # Iterate over scopes, filtering out class scopes, except if the enclosing
             # scope is a def695.
             for scope, depth, precomputed_locals in zip(scopes_iter,
                                                         depths_iter,
