@@ -8,7 +8,7 @@ import sys
 import ast as _ast
 import gast as _gast
 
-from beniget.beniget import _get_lookup_scopes, def695
+from beniget.beniget import _get_lookup_scopes, def695, collect_locals
 
 # Show full diff in unittest
 unittest.util._MAX_LENGTH=2000
@@ -1651,9 +1651,7 @@ class ClassB[S: Sequence[T], T]: ...
         self.checkChains(code, ['Sequence -> (Sequence -> (<Subscript> -> ()), Sequence -> (<Subscript> -> ()))',
                                 'ClassA -> ()',
                                 'ClassB -> ()'])
-        # self.checkUseDefChains(code, 'ClassA <- {S, T}, ClassB <- {S, T}, S <- {S}, '
-        #                              'Sequence <- {Sequence}, Sequence <- {Sequence}, '
-        #                              '<Subscript> <- {S, Sequence}, <Subscript> <- {Sequence, T}, T <- {T}')
+
         self.checkUseDefChains(code, '<Subscript> <- {S, Sequence}, <Subscript> <- {Sequence, T}, ClassA <- {S, T}, ClassB <- {S, T}, S <- {S}, Sequence <- {Sequence}, Sequence <- {Sequence}, T <- {T}')
 
     @skipIf(sys.version_info < (3,12), "Python 3.12 syntax")
@@ -2206,4 +2204,53 @@ class TestUseDefChains(TestCase):
 class TestUseDefChainsStdlib(TestUseDefChains):
     ast = _ast
         
+class TestCollecLocals(TestCase):
+    ast = _gast
 
+    def test_module_locals(self):
+        src = 'class A:...  \ndef b(): ...  \nvar = True   \nfrom x import y as e   \nimport ast   \nimport concurrent.futures'
+        node = self.ast.parse(src)
+        assert collect_locals(node) == {'A', 'b', 'var', 'e', 'ast', 'concurrent'}
+
+    def test_class_locals(self):
+        src = 'class A:\n    x = 1\n    def foo(self): pass\n    def bar(self): pass'
+        node = self.ast.parse(src)
+        assert collect_locals(node.body[0]) == {'x', 'foo', 'bar'}
+
+    def test_function_locals(self):
+        src = 'def f():\n    x = 1\n    y = 2\n    return x + y'
+        node = self.ast.parse(src)
+        assert collect_locals(node.body[0]) == {'x', 'y'}
+
+    def test_function_parameters(self):
+        src = 'def f(a, b, *, c, **kwargs): pass'
+        node = self.ast.parse(src)
+        # TODO: Is it normal that parameters are not included in locals?
+        assert collect_locals(node.body[0]) == set()
+
+    def test_warlus_operator(self):
+        src = 'def f():\n    if (x := 1):\n        pass'
+        node = self.ast.parse(src)
+        assert collect_locals(node.body[0]) == {'x'}
+
+    def test_class_type_parameters(self):
+        src = 'class A[T, U]: v = 1'
+        cls = self.ast.parse(src).body[0]
+        assert collect_locals(cls) == {'v'}
+        assert collect_locals(def695(cls)) == {'A', 'T', 'U'}
+
+    def test_function_type_parameters(self):
+        src = 'def f[T, U](): v = 1'
+        cls = self.ast.parse(src).body[0]
+        assert collect_locals(cls) == {'v'}
+        assert collect_locals(def695(cls)) == {'f', 'T', 'U'}
+
+    def test_comprehensions(self):
+        src = '[x for x in range(10)]'
+        node = self.ast.parse(src)
+        comp = node.body[0].value
+        assert collect_locals(comp) == {'x'}
+
+
+class TestCollecLocalsStdlib(TestCollecLocals):
+    ast = _ast

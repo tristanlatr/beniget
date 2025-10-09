@@ -336,8 +336,7 @@ class CollectLocals(gast.NodeVisitor):
             self.Locals.add(alias.asname or alias.name)
 
 class CollectLocalsdef695(CollectLocals):
-    ...
-    # visit_TypeVar = visit_ParamSpec = visit_TypeVarTuple = CollectLocals.visit_FunctionDef
+    visit_TypeVar = visit_ParamSpec = visit_TypeVarTuple = CollectLocals.visit_FunctionDef
 
 def collect_locals(node):
     '''
@@ -358,9 +357,10 @@ class def695(gast.stmt):
     Special statement to represent the PEP-695 lexical scopes.
     A.k.a annotation scopes.
     """
-    _fields = ('node')
+    _fields = ('body', 'd')
     def __init__(self, node):
-        self.node = node # the wrapped definition node
+        self.body = getattr(node, 'type_params', [])
+        self.d = node # the wrapped definition node
         
 
 class DefUseChains(gast.NodeVisitor):
@@ -530,7 +530,7 @@ class DefUseChains(gast.NodeVisitor):
         # >>> class bar: a = a
         # >>> bar() # ok, and `bar.a is a`
         ast = pkg(scope)
-        if isinstance(scope, (ast.ClassDef, def695)): # TODO: def695 part of this seems not tested yet.
+        if isinstance(scope, ast.ClassDef):
             top_level_definitions = self._definitions[0:-self._scope_depths[0]]
             isglobal = any((name in top_lvl_def or '*' in top_lvl_def)
                            for top_lvl_def in top_level_definitions)
