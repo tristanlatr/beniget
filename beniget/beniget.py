@@ -336,7 +336,8 @@ class CollectLocals(gast.NodeVisitor):
             self.Locals.add(alias.asname or alias.name)
 
 class CollectLocalsdef695(CollectLocals):
-    visit_TypeVar = visit_ParamSpec = visit_TypeVarTuple = CollectLocals.visit_FunctionDef
+    ...
+    # visit_TypeVar = visit_ParamSpec = visit_TypeVarTuple = CollectLocals.visit_FunctionDef
 
 def collect_locals(node):
     '''
