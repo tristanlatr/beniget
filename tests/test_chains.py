@@ -1325,7 +1325,7 @@ fn = outer()
             yield self.ast.parse('lambda: True').body[0].value      # Lambda
             yield self.ast.parse('(x for x in list())').body[0].value  # GeneratorExp
             yield self.ast.parse('{k:v for k, v in dict().items()}').body[0].value  # DictComp
-            yield def695(body=[], d=...)
+            yield def695(None)
 
         mod, fn, cls, lambd, gen, comp, typeparams = get_scopes()
         assert isinstance(mod, self.ast.Module)
@@ -1997,6 +1997,17 @@ class B[decorator](object):
             ...
         class Bag[T](A[T], metaclass=T): ...'''
         self.check_message(src, [])
+    
+    @skipIf(sys.version_info < (3,12), "Python 3.12 syntax")  
+    def test_pepe695_annotations_before_python_314(self):
+        src = '''def f[T](a:(b:=True)): ...'''
+        
+        # Python 3.12
+        self.check_message(src, [])
+
+        # Python 3.14
+        self.check_message('from __future__ import annotations\n' + src, 
+                           ['W: assignment expression cannot be used in annotation-like scopes at <unknown>:2:12'])
 
     @skipIf(sys.version_info < (3,10), "Python 3.10 syntax")
     def test_match_value(self):

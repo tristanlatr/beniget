@@ -1,5 +1,5 @@
 from collections import defaultdict
-from contextlib import contextmanager
+from contextlib import contextmanager, suppress
 import builtins
 import sys
 
@@ -357,10 +357,9 @@ class def695(gast.stmt):
     Special statement to represent the PEP-695 lexical scopes.
     A.k.a annotation scopes.
     """
-    _fields = ('body', 'd')
-    def __init__(self, body, d):
-        self.body = body # list of type params
-        self.d = d # the wrapped definition node
+    _fields = ('node')
+    def __init__(self, node):
+        self.node = node # the wrapped definition node
         
 
 class DefUseChains(gast.NodeVisitor):
@@ -898,7 +897,7 @@ class DefUseChains(gast.NodeVisitor):
                 # Stock semantics don't care about named expressions in annotations.
                 try:
                     _validate_annotation_body(annotation)
-                except SyntaxError as e :
+                except SyntaxError as e:
                     self.warn(str(e), annotation)
                     return
                 self._defered_annotations[-1].append(
@@ -912,53 +911,46 @@ class DefUseChains(gast.NodeVisitor):
         else:
             self.visit(node)
 
-    def visit_FunctionDef(self, node, step=DeclarationStep, in_def695=False):
+    def visit_FunctionDef(self, node, step=DeclarationStep):
         if step is DeclarationStep:
-            type_parameters = getattr(node, 'type_params', [])
-            has_type_parameters = any(type_parameters)
-            defer_annotations = self.future_annotations or has_type_parameters
-
             dnode = self.chains.setdefault(node, Def(node))
             self.add_to_locals(node.name, dnode)
 
-            
-            if not in_def695:
+            for default in node.args.defaults:
+                self.visit(default).add_user(dnode)
+            for kw_default in filter(None, node.args.kw_defaults):
+                self.visit(kw_default).add_user(dnode)
+            for decorator in node.decorator_list:
+                self.visit(decorator)
 
-                for default in node.args.defaults:
-                    self.visit(default).add_user(dnode)
-                for kw_default in filter(None, node.args.kw_defaults):
-                    self.visit(kw_default).add_user(dnode)
-                for decorator in node.decorator_list:
-                    self.visit(decorator)
-                if not defer_annotations:
-                    for arg in _iter_arguments(node.args):
-                        self.visit_annotation(arg, defer=False)
-                    self.visit_annotation(node, defer=False, field='returns')
-
-                if has_type_parameters:
-                    self.visit_def695(def695(body=type_parameters, d=node))
-                    return
+            if getattr(node, 'type_params', None):
+                annotation_context = self.ScopeContext(def695(node))
+            else:
+                annotation_context = suppress()
             
-            if defer_annotations:
+            with annotation_context:
+                self.process_type_params(node)
+
                 for arg in _iter_arguments(node.args):
-                    self.visit_annotation(arg, defer=True)
-                self.visit_annotation(node, defer=True, field='returns')
+                    self.visit_annotation(arg, defer=self.future_annotations)
+                self.visit_annotation(node, defer=self.future_annotations, field='returns')
             
-            # emulate this (except f is not actually defined in both scopes): 
-            # def695 __generic_parameters_of_f():
-            #     T = TypeVar(name='T')
-            #     def f(x: T) -> T:
-            #         return x
-            #     return f
-            # f = __generic_parameters_of_f()
-            scopeindex = -1 if not in_def695 else -2
-            self.set_definition(node.name, dnode, index=scopeindex)
+                # emulate this (except f is not actually defined in both scopes): 
+                # def695 __generic_parameters_of_f():
+                #     T = TypeVar(name='T')
+                #     def f(x: T) -> T:
+                #         return x
+                #     return f
+                # f = __generic_parameters_of_f()
 
-            self._defered.append((node,
-                                  list(self._definitions),
-                                  list(self._scopes),
-                                  list(self._scope_depths),
-                                  list(self._precomputed_locals)))
+                self._defered.append((node,
+                                    list(self._definitions),
+                                    list(self._scopes),
+                                    list(self._scope_depths),
+                                    list(self._precomputed_locals)))
+            
+            self.set_definition(node.name, dnode)
+
         elif step is DefinitionStep:
             with self.ScopeContext(node):
                 for arg in _iter_arguments(node.args):
@@ -969,30 +961,31 @@ class DefUseChains(gast.NodeVisitor):
 
     visit_AsyncFunctionDef = visit_FunctionDef
 
-    def visit_ClassDef(self, node, in_def695=False):
+    def visit_ClassDef(self, node):
         dnode = self.chains.setdefault(node, Def(node))
         self.add_to_locals(node.name, dnode)
 
-        if not in_def695:
-            for decorator in node.decorator_list:
-                self.visit(decorator).add_user(dnode)
+        for decorator in node.decorator_list:
+            self.visit(decorator).add_user(dnode)
 
-            if any(getattr(node, 'type_params', [])):
-                self.visit_def695(def695(body=node.type_params, d=node))
-                return
+        if getattr(node, 'type_params', None):
+            annotation_context = self.ScopeContext(def695(node))
+        else:
+            annotation_context = suppress()
+            
+        with annotation_context:
+            self.process_type_params(node)
         
-        for base in node.bases:
-            self.visit(base).add_user(dnode)
-        for keyword in node.keywords:
-            self.visit(keyword.value).add_user(dnode)
+            for base in node.bases:
+                self.visit(base).add_user(dnode)
+            for keyword in node.keywords:
+                self.visit(keyword.value).add_user(dnode)
 
-        with self.ScopeContext(node):
-            self.set_definition("__class__", Def("__class__"))
-            self.process_body(node.body)
+            with self.ScopeContext(node):
+                self.set_definition("__class__", Def("__class__"))
+                self.process_body(node.body)
 
-        # see comment in visit_FunctionDef
-        scopeindex = -1 if not in_def695 else -2
-        self.set_definition(node.name, dnode, index=scopeindex)
+        self.set_definition(node.name, dnode)
 
 
     def visit_Return(self, node):
@@ -1048,7 +1041,7 @@ class DefUseChains(gast.NodeVisitor):
         else:
             self.visit(node.target).add_user(dvalue)
     
-    def visit_TypeAlias(self, node, in_def695=False):
+    def visit_TypeAlias(self, node):
         # Generic type aliases:
         # type Alias[T: int] = list[T]
 
@@ -1064,24 +1057,22 @@ class DefUseChains(gast.NodeVisitor):
 
         ast = pkg(node)
 
-        if isinstance(node.name, ast.Name):
-            dname = self.chains.setdefault(node.name, Def(node.name))
-            self.add_to_locals(node.name.id, dname)
+        if not isinstance(node.name, ast.Name):
+            raise NotImplementedError()
+        
+        dname = self.chains.setdefault(node.name, Def(node.name))
+        self.add_to_locals(node.name.id, dname)
 
-            if not in_def695 and any(getattr(node, 'type_params', [])):
-                self.visit_def695(def695(body=node.type_params, d=node))
-                return
-            
-            dnode = self.chains.setdefault(node, Def(node))
+        if getattr(node, 'type_params', []):
+            annotation_context = self.ScopeContext(def695(node))
+        else:
+            annotation_context = suppress()
+        
+        with annotation_context:
+            self.process_type_params(node)
             self.visit_annotation(node, defer=True, field='value')
 
-            # see comment in visit_FunctionDef
-            scopeindex = -1 if not in_def695 else -2
-            self.set_definition(node.name.id, dname, index=scopeindex)           
-            
-            return dnode
-        else:
-            raise NotImplementedError()
+        self.set_definition(node.name.id, dname)           
 
     def visit_For(self, node):
         self.visit(node.iter)
@@ -1562,33 +1553,16 @@ class DefUseChains(gast.NodeVisitor):
     
     # type params
 
-    def visit_def695(self, node):
-        # We don't use two steps here because the declaration 
-        # step is the same as definition step for def695's
-        # 1.type parameters of generic type aliases, 
-        # 2.type parameters and annotations of generic functions and
-        # 3.type parameters and base class expressions of generic classes
-        # the rest is evaluated as defered annotations:
-        # 4.the value of generic type aliases
-        # 5.the bounds of type variables
-        # 6.the constraints of type variables
-        
-        # introduce the new scope
-        dnode = self.chains.setdefault(node.d, Def(node.d))
-        
-        with self.ScopeContext(node):
-            # visit the type params
-            for p in node.body:
-                try:
-                    _validate_annotation_body(p)
-                except SyntaxError as e:
-                    self.warn(str(e), p)
-                else:
-                    self.visit(p).add_user(dnode)
-            # then visit the actual node while 
-            # being in the def695 scope.
-            visitor = getattr(self, "visit_{}".format(type(node.d).__name__))
-            visitor(node.d, in_def695=True)
+    def process_type_params(self, node):
+        dnode = self.chains.setdefault(node, Def(node))
+        # visit the type params
+        for p in getattr(node, 'type_params', []):
+            try:
+                _validate_annotation_body(p)
+            except SyntaxError as e:
+                self.warn(str(e), p)
+            else:
+                self.visit(p).add_user(dnode)
 
     def visit_TypeVar(self, node):
         # these nodes can only be visited under a def695 scope
