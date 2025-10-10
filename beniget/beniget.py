@@ -353,14 +353,53 @@ def collect_locals(node):
     return visitor.Locals
 
 class def695(gast.stmt):
-    """
-    Special statement to represent the PEP-695 lexical scopes.
-    A.k.a annotation scopes.
+    r"""
+    Special construct to represent the PEP-695 lexical scopes.
+
+    A.k.a annotation scopes. Currently only used in the context of type parameters 
+    of generic classes/functions or type aliases. We have another mecanism to handle
+    annotations. 
+
+    Example usage:
+
+    >>> import ast, unittest, sys
+    >>> if sys.version_info < (3,12): raise unittest.SkipTest("Python 3.12 syntax")
+    >>> from beniget import DefUseChains, def695
+    >>> module = ast.parse('class ClassA[T]:\n def func(self, x: T) -> T: ...')
+    >>> (duc := DefUseChains()).visit(module)
+    >>> print(duc.dump_chains(def695(module.body[0]))) # Prints the locals of the type parameter scope of the class:
+    ['T -> (T -> (), T -> ())']
+
     """
     _fields = ('body', 'd')
+    
     def __init__(self, node):
         self.body = getattr(node, 'type_params', [])
         self.d = node # the wrapped definition node
+    
+    def __hash__(self):
+        r"""
+        >>> import ast, beniget
+        >>> module = ast.parse('class ClassA[T]:\n def func(self, x: T) -> T: ...')
+        >>> hash(beniget.def695(module.body[0])) == hash(beniget.def695(module.body[0]))
+        True
+        >>> hash(beniget.def695(module.body[0])) is hash(module.body[0])
+        False
+        """
+        return hash(id(self.d)+1)
+    
+    def __eq__(self, value):
+        r"""
+        >>> import ast, beniget
+        >>> module = ast.parse('class ClassA[T]:\n def func(self, x: T) -> T: ...')
+        >>> beniget.def695(module.body[0]) == beniget.def695(module.body[0])
+        True
+        >>> beniget.def695(module.body[0]) == module.body[0]
+        False
+        """
+        if not isinstance(value, def695):
+            return NotImplemented
+        return self.d == value.d
         
 
 class DefUseChains(gast.NodeVisitor):
@@ -930,7 +969,7 @@ class DefUseChains(gast.NodeVisitor):
                 annotation_context = suppress()
             
             with annotation_context:
-                self.process_type_params(node)
+                self.visit_type_params(node)
 
                 for arg in _iter_arguments(node.args):
                     self.visit_annotation(arg, defer=self.future_annotations)
@@ -975,7 +1014,7 @@ class DefUseChains(gast.NodeVisitor):
             annotation_context = suppress()
             
         with annotation_context:
-            self.process_type_params(node)
+            self.visit_type_params(node)
         
             for base in node.bases:
                 self.visit(base).add_user(dnode)
@@ -1070,7 +1109,7 @@ class DefUseChains(gast.NodeVisitor):
             annotation_context = suppress()
         
         with annotation_context:
-            self.process_type_params(node)
+            self.visit_type_params(node)
             self.visit_annotation(node, defer=True, field='value')
 
         self.set_definition(node.name.id, dname)           
@@ -1552,31 +1591,25 @@ class DefUseChains(gast.NodeVisitor):
             self.visit(node.step).add_user(dnode)
         return dnode
     
-    # type params
+    # type parameters, these nodes can only be visited under a def695 scope
 
-    def process_type_params(self, node):
-        dnode = self.chains.setdefault(node, Def(node))
+    def visit_type_params(self, node):
         # visit the type params
         for p in getattr(node, 'type_params', []):
-            try:
-                _validate_annotation_body(p)
-            except SyntaxError as e:
-                self.warn(str(e), p)
-            else:
-                self.visit(p).add_user(dnode)
+            self.visit(p)
 
-    def visit_TypeVar(self, node):
-        # these nodes can only be visited under a def695 scope
+    def visit_TypeVarTuple(self, node):
         dnode = self.chains.setdefault(node, Def(node))
         self.set_definition(node.name, dnode)
-        self.add_to_locals(node.name, dnode)
-
-        if type(node).__name__ == 'TypeVar':
-            self.visit_annotation(node, defer=True, field='bound')
-           
+        self.add_to_locals(node.name, dnode)           
         return dnode
 
-    visit_ParamSpec = visit_TypeVarTuple = visit_TypeVar
+    visit_ParamSpec = visit_TypeVarTuple
+
+    def visit_TypeVar(self, node):
+        dnode = self.visit_TypeVarTuple(node)
+        self.visit_annotation(node, defer=True, field='bound')
+        return dnode
 
     # misc
 
