@@ -2028,6 +2028,11 @@ class C[V]:
         self.check_message('from __future__ import annotations\n' + src, 
                            ['W: assignment expression cannot be used in annotation-like scopes at <unknown>:2:12'])
 
+    @skipIf(sys.version_info < (3,13), "Python 3.13 syntax")  
+    def test_pep696_type_aliases_default_forward_reference(self):
+        code = '''type X[T = defer] = ...; defer = X'''
+        self.check_message(code, [])
+
     @skipIf(sys.version_info < (3,10), "Python 3.10 syntax")
     def test_match_value(self):
         code = '''
@@ -2221,6 +2226,39 @@ class TestUseDefChains(TestCase):
     def test_delete(self):
         code = "a = 1; del a"
         self.checkChains(code, "a <- {a}")
+    
+    @skipIf(sys.version_info < (3,13), "Python 3.13 syntax")  
+    def test_pep696_type_aliases(self):
+        code = '''type X[T = bytes] = dict[T, int]'''
+        self.checkChains(code, '<Subscript> <- {<Tuple>, dict}, '
+                               '<Tuple> <- {T, int}, '
+                               'T <- {T}, bytes <- {<type>}, '
+                               'dict <- {<type>}, int <- {<type>}')
+    
+    @skipIf(sys.version_info < (3,13), "Python 3.13 syntax")  
+    def test_pepe696_function_type_param(self):
+        code = '''def foo[T = bytes, *Ts = *tuple[str, int], **P = [str, int]](*args: *Ts, **kwargs: P.kwargs) -> T: ...'''
+        self.checkChains(code, '.kwargs <- {P}, <List> <- {int, str}, '
+                               '<Starred> <- {<Subscript>}, '
+                               '<Starred> <- {Ts}, <Subscript> <- {<Tuple>, tuple}, '
+                               '<Tuple> <- {int, str}, P <- {P}, T <- {T}, '
+                               'Ts <- {Ts}, bytes <- {<type>}, int <- {<type>}, '
+                               'int <- {<type>}, str <- {<type>}, '
+                               'str <- {<type>}, tuple <- {<type>}')
+    
+    @skipIf(sys.version_info < (3,13), "Python 3.13 syntax")  
+    def test_pep696_class_paramspec(self):
+        code = '''class Foo[**P = [str, int]]: ...'''
+        self.checkChains(code, '<List> <- {int, str}, int <- {<type>}, str <- {<type>}')
+
+    @skipIf(sys.version_info < (3,13), "Python 3.13 syntax")  
+    def test_pepe696_class_typevar_tuple(self):
+        code = '''class Foo[*Ts = *tuple[str, int]]: ...'''
+        self.checkChains(code, '<Starred> <- {<Subscript>}, '
+                               '<Subscript> <- {<Tuple>, tuple}, '
+                               '<Tuple> <- {int, str}, '
+                               'int <- {<type>}, str <- {<type>}, tuple <- {<type>}')
+
 
 class TestUseDefChainsStdlib(TestUseDefChains):
     ast = _ast
@@ -2271,7 +2309,6 @@ class TestCollecLocals(TestCase):
         node = self.ast.parse(src)
         comp = node.body[0].value
         assert collect_locals(comp) == {'x'}
-
 
 class TestCollecLocalsStdlib(TestCollecLocals):
     ast = _ast

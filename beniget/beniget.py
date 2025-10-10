@@ -1601,7 +1601,8 @@ class DefUseChains(gast.NodeVisitor):
     def visit_TypeVarTuple(self, node):
         dnode = self.chains.setdefault(node, Def(node))
         self.set_definition(node.name, dnode)
-        self.add_to_locals(node.name, dnode)           
+        self.add_to_locals(node.name, dnode)
+        self.visit_annotation(node, defer=True, field='default_value')
         return dnode
 
     visit_ParamSpec = visit_TypeVarTuple
