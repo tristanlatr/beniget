@@ -25,6 +25,11 @@ def replace_deprecated_names(out):
         '<NameConstant>', '<Constant>'
     )
 
+def replace_pypy_specific_names(out):
+    return out.replace(
+        '<builtin_function>', '<builtin_function_or_method>'
+    )
+
 @contextmanager
 def captured_output():
     new_out, new_err = io.StringIO(), io.StringIO()
@@ -1668,6 +1673,8 @@ class TestUseDefChains(TestCase):
         if sys.version_info.minor in {6, 7}:
             # 3.6 or 3.7
             actual = replace_deprecated_names(actual)
+
+        actual = replace_pypy_specific_names(actual)
 
         self.assertEqual(actual, ref)
 
